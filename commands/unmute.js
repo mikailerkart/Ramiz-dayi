@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
     if(!muteUser) return message.reply("kullanci bulunamiyor");
 
-    let muteRole = message.guild.roles.cache.get("839462016812580874"); // muted rol
+    let muteRole = message.guild.roles.cache.get("890272416582996088"); // muted rol
 
     if(!muteRole) return message.channel.send("Muted rol ayarlanmamis, lütfen ayarlayiniz.");
 
