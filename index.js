@@ -91,7 +91,21 @@ client.on('interactionCreate', interaction => {
  
  });
 
+ client.on("guildMemberAdd", async (member) => { // when user join server he gets a role + welcome message
 
+    var role = member.guild.roles.cache.get("886363191678992455") // unregister role
+
+    if(!role) return;
+
+    member.roles.add(role);
+
+    var channel = member.guild.channels.cache.get("887714260279500841"); // welcome channel
+
+    if (!channel) return;
+
+    channel.send(`Sunucu'ya hoş geldin, ${member}`);
+
+});
 
 client.on("messageCreate", async message => {
     if(message.author.bot) return;
