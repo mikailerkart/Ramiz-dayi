@@ -2,43 +2,43 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    if(!message.member.roles.cache.has('942851209725870081')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
+    if(!message.member.roles.cache.has('886602905468158003')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
 
     const options = [
         {
 
         label: "Mezun",
-        value: "943157047338369105",
+        value: "890987737233100820",
         emoji: "🎓"
         },
     {
 
         label: `12. sınıf`,
-        value: "943157129647366234",
+        value: "890987764965867521",
         emoji: "🟠"
     },
     {
 
         label: `11. sınıf`,
-        value: "943157154431508570",
+        value: "890987761472012358",
         emoji: "🟢"
     },
     {
 
         label: `10. sınıf`,
-        value: "943157180075483167",
+        value: "890987758213025832",
         emoji: "🟣"
     },
     {
 
         label: `9. sınıf`,
-        value: "943157180075483167",
+        value: "890987753850953739",
         emoji: "🟤"
     },
     {
 
         label: `Üniversite / Yüksekokul`,
-        value: "943157180075483167",
+        value: "890987779499122759",
         emoji: "🟥"
     }
 

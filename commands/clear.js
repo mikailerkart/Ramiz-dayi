@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.roles.cache.has('942438028624953384')) /*clear yetkili rol */ return message.reply("Clear atmak için yetkin yok.")
+    if(!message.member.roles.cache.has('944696013497700413')) /*clear yetkili rol */ return message.reply("Clear atmak için yetkin yok.")
 
     if(!args[0]) return message.reply("Ne kadar mesaj silmek istediğini sayi ile belirtmen lazim.")
 

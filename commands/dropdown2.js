@@ -2,127 +2,127 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    if(!message.member.roles.cache.has('942851209725870081')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
+    if(!message.member.roles.cache.has('886602905468158003')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
 
     const options = [
         {
 
         label: "Mühendislik",
-        value: "943157047338369105",
+        value: "887363174909763624",
         emoji: "🧑‍💻"
         },
     {
 
         label: "Öğretmenlik",
-        value: "943157129647366234",
+        value: "887363224465449033",
         emoji: "🧑‍🏫"
     },
     {
 
         label: `Bankacılık ve Finans`,
-        value: "943157154431508570",
+        value: "887363240806465556",
         emoji: "🏦"
     },
     {
 
         label: `Basın ve yayın`,
-        value: "943157180075483167",
+        value: "887363288676057118",
         emoji: "📰"
     },
     {
 
         label: "Diller",
-        value: "943157180075483167",
+        value: "887363382393573376",
         emoji: "🌐"
     },
     {
 
         label: "Enformatik",
-        value: "943157180075483167",
+        value: "887363410776453130",
         emoji: "💻"
     },
     {
 
         label: "Tarih",
-        value: "943157180075483167",
+        value: "887363439935238216",
         emoji: "📜"
     },
     {
 
         label: "Biyoloji",
-        value: "943157180075483167",
+        value: "887363465893789716",
         emoji: "🧬"
     },
     {
 
         label: "Coğrafya",
-        value: "943157180075483167",
+        value: "887363483111411722",
         emoji: "🌍"
     },
     {
 
         label: `Diş hekimliği`,
-        value: "943157180075483167",
+        value: "887363510865129513",
         emoji: "🦷"
     },
     {
 
         label: "Doktor",
-        value: "943157180075483167",
+        value: "887363786548338758",
         emoji: "👨‍⚕️"
     },
     {
 
         label: `Ekonomi (ve finans)`,
-        value: "943157180075483167",
+        value: "887363810430693406",
         emoji: "💵"
     },
     {
 
         label: "Felsefe",
-        value: "943157180075483167",
+        value: "887363831607726102",
         emoji: "🧠"
     },
     {
 
         label: "Fizik",
-        value: "943157180075483167",
+        value: "887363856366698536",
         emoji: "🎚️"
     },
     {
 
         label: "Gastronomi",
-        value: "943157180075483167",
+        value: "887363870375677952",
         emoji: "🧑‍🍳"
     },
     {
 
         label: "Gazetecilik",
-        value: "943157180075483167",
+        value: "887363884317548596",
         emoji: "🗞️"
     },
     {
 
-        label: "Hemşirelik/Hemşir",
-        value: "943157180075483167",
+        label: "Hemşir(e)",
+        value: "887363898653691915",
         emoji: "👩‍⚕️"
     },
     {
 
         label: "Hukuk",
-        value: "943157180075483167",
+        value: "887363913728024596",
         emoji: "🧑‍⚖️"
     },
     {
 
         label: "Mimarlık",
-        value: "943157180075483167",
+        value: "887363928508735499",
         emoji: "📝"
     },
     {
 
         label: "İslam",
-        value: "943157180075483167",
+        value: "887363945806053386",
         emoji: "☪️"
     },
 

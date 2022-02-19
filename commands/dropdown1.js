@@ -2,31 +2,31 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-    if(!message.member.roles.cache.has('942851209725870081')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
+    if(!message.member.roles.cache.has('886602905468158003')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
 
     const options = [
         {
 
         label: "Eşit Ağırlık",
-        value: "943157047338369105",
+        value: "887052743703949338",
         emoji: "⚖️"
         },
     {
 
         label: "Sayısal",
-        value: "943157129647366234",
+        value: "887052861295444028",
         emoji: "🔢"
     },
     {
 
         label: "Sözel",
-        value: "943157154431508570",
+        value: "887052899237117982",
         emoji: "📚"
     },
     {
 
         label: "Dil",
-        value: "943157180075483167",
+        value: "890284677187919892",
         emoji: "🗣️"
     }
 
