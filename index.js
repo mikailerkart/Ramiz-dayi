@@ -1,0 +1,140 @@
+const { Client, Intents, Collection, Interaction} = require("discord.js");
+const config = require("./config.json");
+const fs = require("fs");
+
+const client = new Client({
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGE_REACTIONS]
+});
+
+
+client.commands = new Collection();
+
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith(".js"));
+
+for(const file of commandFiles){
+
+    const command = require(`./commands/${file}`);
+
+    client.commands.set(command.help.name, command);
+
+    console.log(`dosya ${command.help.name}.js yüklendi`);
+
+}
+
+client.once("ready", () => {
+
+    console.log(`${client.user.username} is online.`);
+    client.user.setActivity("Sena mükemmel", { type: "PLAYING"});
+
+    const statusOptions = [
+        "Sena mükkemel",
+        "Mikail never gives up.",
+        "GALATASARAY <3"
+    ]
+
+    let counter = 0;
+
+    let time = 1 * 60 * 1000; // 1 dakika
+
+    const updateStatus = () => {
+
+        client.user.setPresence({
+
+            status: "online",
+            activities: [
+                {
+                    name: statusOptions[counter]
+                }
+            ]
+        });
+
+        if(++counter >= statusOptions.length) counter = 0;
+
+        setTimeout(updateStatus, time);
+
+    }
+    updateStatus();
+
+});
+
+client.on('interactionCreate', interaction => {
+
+   if (!interaction.isSelectMenu()) {
+       return;
+   }
+
+   const { customId, values, member} = interaction;
+
+   if (customId === 'roles'){
+
+        const component = interaction.component;
+
+        const removed = component.options.filter((option) => {
+            return !values.includes(option.values)
+        });
+
+        for(var id of removed){
+            member.roles.remove(id.value)
+        }
+        
+        for(var id of values){
+            member.roles.add(id)
+        }
+
+        interaction.reply({
+            content: "Roller güncellendi",
+            ephemeral: true
+        });
+ 
+    }
+ 
+ });
+
+client.on("guildMemberAdd", async (member) => { // when user join server he gets a role + welcome message
+
+    var role = member.guild.roles.cache.get("941823689756934185") // unregister role
+
+    if(!role) return;
+
+    member.roles.add(role);
+
+    var channel = member.guild.channels.cache.get("941825830194151494"); // welcome channel
+
+    if (!channel) return;
+
+    channel.send(`Sunucu'ya hoş geldin, ${member}`);
+
+});
+
+
+client.on("messageCreate", async message => {
+    if(message.author.bot) return;
+
+    var prefix = config.prefix;
+
+    var messageArray = message.content.split(" ");
+
+    var command = messageArray[0];
+
+    if (!message.content.startsWith(prefix)) return;
+
+    const commandData = client.commands.get(command.slice(prefix.length));
+
+    if (!commandData) return;
+
+    var arguments = messageArray.slice(1);
+
+    try{
+
+        await commandData.run(client, message, arguments);
+
+    }catch(error) {
+       console.log(error);
+       await message.reply("Bu komut yürütülürken bir sorun oluştu");
+    }
+
+    
+});
+
+client.login(process.env.token);
