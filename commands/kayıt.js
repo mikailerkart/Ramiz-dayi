@@ -4,7 +4,7 @@ const config = require("../config.json")
 
 module.exports.run = async (client, message, args) => {
 
-    if(!message.member.roles.cache.has('942851209725870081')) /*üst yönetim yetkili rol */ return message.reply("kayit atmak için yetkin yok.");
+    if(!message.member.roles.cache.has('909023960207863808')) /*üst yönetim yetkili rol */ return message.reply("kayit atmak için yetkin yok.");
 
     const botEmbed = new discord.MessageEmbed()
         .setDescription(`
