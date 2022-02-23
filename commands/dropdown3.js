@@ -117,7 +117,12 @@ module.exports.run = async (client, message, args) => {
 
         label: `Elektronörofizyoloji`,
         value: "946121635843436704",
-        emoji: "🧪"
+        emoji: "🧠"
+    },
+    {
+        label: `Uluslararası Ticaret`,
+        value: "946129349885718628",
+        emoji: "💰"
     }
 
     ];
