@@ -112,6 +112,12 @@ module.exports.run = async (client, message, args) => {
         label: `Süt Teknolojisi`,
         value: "891066856734093373",
         emoji: "🥛"
+    },
+    {
+
+        label: `Elektronörofizyoloji`,
+        value: "946121635843436704",
+        emoji: "🧪"
     }
 
     ];
@@ -122,7 +128,7 @@ module.exports.run = async (client, message, args) => {
         new discord.MessageSelectMenu()
         .setCustomId("roles")
         .setMinValues(0)
-        .setMaxValues(18)
+        .setMaxValues(19)
         .setPlaceholder("Bir rol seç.")
         .addOptions(options)
     )
