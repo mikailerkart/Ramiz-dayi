@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         .setTitle(`${member.user.tag}`)
         .addFields(
             {name: "ID:", value: `${member.user.id}`, inline: true},
-            {name: "Joined at:", value: message.member.joinedAt.toString()},
+            {name: "Joined at:", value: `${moment(member.user.joinedAt).format("LL")}`},
             {name: "Created at:", value: `${moment(member.user.createdAt).format("LL")}`},
             {name: `Roles [${roles}]`, value: `${roleNames}`}
 
