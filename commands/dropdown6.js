@@ -50,12 +50,12 @@ module.exports.run = async (client, message, args) => {
     )
 
     return message.channel.send({content: `**Aşağıdaki rollerden kendinize uygun rol alabilirsiniz.**
-    *You can take a suitable role for yourself from the following roles.*`, components: [Row] });
+*You can take a suitable role for yourself from the following roles.*`, components: [Row] });
 
 }
 
 module.exports.help = {
-    name: "dropdown5",
+    name: "dropdown6",
     category: "general",
     description: "Anket"
 }
