@@ -8,13 +8,13 @@ module.exports.run = async (client, message, args) => {
         {
 
         label: "Türk",
-        value: "889585808397467709",
+        value: "887052314064584775",
         emoji: "🇹🇷"
         },
     {
 
         label: `Alien`,
-        value: "889585820779044896",
+        value: "887052613722452038",
         emoji: "👽"
     }
 
