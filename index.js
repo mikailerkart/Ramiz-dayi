@@ -153,11 +153,13 @@ client.on('interactionCreate', async interaction => {
 
     member.roles.add(role);
 
-    var channel = member.guild.channels.cache.get("938388010666450984"); // welcome channel
+    var channel = member.guild.channels.cache.get("952555763669291108"); // welcome channel
 
     if (!channel) return;
 
-    channel.send(`Sunucu'ya hoş geldin, ${member}`);
+    channel.send(`Hello and welcome ${member}! 😄 Take a moment register yourself from <#887714260279500841> or <#887047969247993916>, and also <#952555916706844714> which contains useful information about the channels, assignable roles and bot commands that will help you learn better and use the server to its full potential.
+-
+Merhaba ve hoşgeldin ${member}! Bir dakikanızı ayırın, kendinizi <#887714260279500841> veya <#887047969247993916> bölümünden kaydedin ve ayrıca sunucuyu daha iyi öğrenmenize tam potansiyeliyle kullanmanıza yardımcı olacak kanallar, alınabilir roller ve bot komutları hakkında yararlı bilgiler içeren <#952555916706844714> göz gezdirebilirsiniz. `);
 
 });
 
