@@ -153,7 +153,7 @@ client.on('interactionCreate', async interaction => {
 
     member.roles.add(role);
 
-    var channel = member.guild.channels.cache.get("887714260279500841"); // welcome channel
+    var channel = member.guild.channels.cache.get("938388010666450984"); // welcome channel
 
     if (!channel) return;
 
