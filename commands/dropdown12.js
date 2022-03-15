@@ -5,58 +5,52 @@ module.exports.run = async (client, message, args) => {
     if(!message.member.roles.cache.has('886602905468158003')) /*anket kurma yetkili rol */ return message.reply("Anket kurmak için yetkin yok.");
 
     const options = [
-        {
-
-        label: "Mezun",
-        value: "890987737233100820",
-        emoji: "🎓"
-        },
     {
 
-        label: `12. sınıf`,
-        value: "890987764965867521",
+        label: `12th grade`,
+        value: "953239677597548545",
         emoji: "🟠"
     },
     {
 
-        label: `11. sınıf`,
-        value: "890987761472012358",
+        label: `11th grade`,
+        value: "953239713962156064",
         emoji: "🟢"
     },
     {
 
-        label: `10. sınıf`,
-        value: "890987758213025832",
+        label: `10th grade`,
+        value: "953239797353283635",
         emoji: "🟣"
     },
     {
 
-        label: `9. sınıf`,
-        value: "890987753850953739",
+        label: `9th grade`,
+        value: "953239929830383616",
         emoji: "🟤"
     },
     {
 
-        label: "Lisans",
-        value: "890987779499122759",
+        label: "Bachelor",
+        value: "953236956303753236",
         emoji: "🟨"
     },
     {
 
-        label: "Yüksek Lisans",
-        value: "953237456499642389",
+        label: "Master",
+        value: "953237026809983016",
         emoji: "🟧"
     },
     {
 
-        label: "Doktora",
-        value: "953237528679419954",
+        label: "PHD",
+        value: "953237279898468372",
         emoji: "🟥"
     },
     {
 
         label: "Alumnus",
-        value: "953237555111948308",
+        value: "953237295308374066",
         emoji: "🟩"
     }
     
@@ -69,16 +63,16 @@ module.exports.run = async (client, message, args) => {
         .setCustomId("roles")
         .setMinValues(0)
         .setMaxValues(4)
-        .setPlaceholder("Bir rol seç.")
+        .setPlaceholder("Choose a role.")
         .addOptions(options)
     )
 
-    return message.channel.send({content: "**Aşağıdaki rollerden kendinize uygun rol alabilirsiniz.**", components: [Row] });
+    return message.channel.send({content: "**You can take a role that suits you from the following roles.**", components: [Row] });
 
 }
 
 module.exports.help = {
-    name: "dropdown5",
+    name: "dropdown12",
     category: "general",
     description: "Anket"
 }
