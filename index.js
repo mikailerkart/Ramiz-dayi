@@ -78,7 +78,7 @@ client.once("ready", () => {
     let guildId = "886363191678992455"; //sever id
     let clientId = "699234520116887602"; //bot id
 
-    const rest = new REST({ version: '9'}).setToken(process.env.token);
+    const rest = new REST({ version: '9'}).setToken(config.token);
 
 (async () => {
     try {
@@ -192,4 +192,4 @@ client.on("messageCreate", async message => {
     
 });
 
-client.login(process.env.token);
+client.login(config.token);
