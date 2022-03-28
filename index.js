@@ -147,7 +147,7 @@ client.on('interactionCreate', async interaction => {
 
  client.on("guildMemberAdd", async (member) => { // when user join server he gets a role + welcome message
 
-    var role = member.guild.roles.cache.get("886363191678992455") // unregister role
+    var role = member.guild.roles.cache.get("946127946383499325") // unregister role
 
     if(!role) return; 
 
