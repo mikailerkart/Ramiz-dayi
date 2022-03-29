@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
     },
     {
 
-        label: `Fizyoterapi ve rehabilitasyonm`,
+        label: `Fizyoterapi ve rehabilitasyon`,
         value: "958297263258619967",
         emoji: "💀"
     },
