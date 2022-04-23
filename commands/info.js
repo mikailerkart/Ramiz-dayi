@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
         .setAuthor("Ramiz dayi", 'https://i.imgur.com/C0rnWy1.png')
         .setColor("#0099FF")
         .addFields(
-            {name: "Version", value: "1.0.1"},
+            {name: "Version", value: "1.0.2"},
             {name: "Creator", value: "Løne Wølf ⌁#9897"},
             {name: "Underworld", value: 'discord.gg/SNXdvsstGR'},
             {name: "Revival", value: 'discord.gg/pAvTDAtbpB'} 
