@@ -28,6 +28,12 @@ module.exports.run = async (client, message, args) => {
         label: "Eczacılık",
         value: "958297618038009866",
         emoji: "💊"
+    },
+    {
+        label: "Dilbilim",
+        value: "967472370631716874",
+        emoji: "🎤"
+
     }
 
     ];
@@ -38,7 +44,7 @@ module.exports.run = async (client, message, args) => {
         new discord.MessageSelectMenu()
         .setCustomId("roles")
         .setMinValues(0)
-        .setMaxValues(4)
+        .setMaxValues(5)
         .setPlaceholder("Bir rol seç.")
         .addOptions(options)
     )
