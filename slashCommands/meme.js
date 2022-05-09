@@ -9,7 +9,7 @@ module.exports = {
         .setDescription('meme atar'),
         async execute(client, interaction){
 
-            fetch(" https://www.reddit.com/r/memes/random/.json").then(resp =>
+            fetch(" https://www.reddit.com/r/TurkeyJerky/random/.json").then(resp =>
                 resp.json()).then(respData => {
 
                     var permaLink = respData[0].data.children[0].data.permalink;
