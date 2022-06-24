@@ -7,12 +7,6 @@ module.exports.run = async (client, message, args) => {
     const options = [
     {
 
-        label: "Burç Yorumu",
-        value: "989518823868747776",
-        emoji: "989954567544393818"
-    },
-    {
-
         label: "Çekiliş Katılımcısı",
         value: "989518854227128390",
         emoji: "989954760142651472"
@@ -36,7 +30,7 @@ module.exports.run = async (client, message, args) => {
         .addOptions(options)
     )
 
-    return message.channel.send({content: "**Aşağıdaki ilişki rollerden kendinize uygun rolünüzü alabilirsiniz.**", components: [Row] });
+    return message.channel.send({content: "**Aşağıdaki etkinlik rollerden kendinize uygun rolünüzü alabilirsiniz.**", components: [Row] });
 
 }
 
