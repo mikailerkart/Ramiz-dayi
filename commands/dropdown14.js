@@ -81,7 +81,7 @@ module.exports.run = async (client, message, args) => {
         .addOptions(options)
     )
 
-    return message.channel.send({content: "**Aşağıdaki burç rollerden kendi burç rolünüzü alabilirsin.**", components: [Row] });
+    return message.channel.send({content: "**Aşağıdaki burç rollerden kendi burç rolünüzü alabilirsiniz.**", components: [Row] });
 
 }
 

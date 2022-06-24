@@ -31,7 +31,7 @@ module.exports.run = async (client, message, args) => {
         .addOptions(options)
     )
 
-    return message.channel.send({content: "**Aşağıdaki ilişki rollerden kendinize uygun rolünüzü alabilirsin.**", components: [Row] });
+    return message.channel.send({content: "**Aşağıdaki ilişki rollerden kendinize uygun rolünüzü alabilirsiniz.**", components: [Row] });
 
 }
 
