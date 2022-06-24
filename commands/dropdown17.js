@@ -41,7 +41,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: "dropdown15",
+    name: "dropdown17",
     category: "general",
     description: "Anket"
 }
