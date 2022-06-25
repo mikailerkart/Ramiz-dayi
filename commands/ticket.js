@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args, prefix) => {
 
     if (message.channel.id === '967460038157418607') /* ticket kurma chat */  {
 
-    const categoryID = "967459699832275014"; // ticket category
+    const categoryID = "988827487591096380"; // ticket category
 
     var userName = message.author.username;
 
