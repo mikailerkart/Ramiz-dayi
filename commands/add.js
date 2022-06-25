@@ -2,7 +2,7 @@ const discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
 
-    const categoryID = "967459699832275014"; // ticket category
+    const categoryID = "988827487591096380"; // ticket category
 
     if(!message.member.roles.cache.has('886602905468158003')) /*add yetkili rol */ return message.reply("ticket'e üye eklemek için yetkin yok.");
 

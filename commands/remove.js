@@ -2,7 +2,7 @@ const discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
 
-    const categoryID = "967459699832275014";
+    const categoryID = "988827487591096380";
 
     if(!message.member.roles.cache.has('886602905468158003')) /*remove yetkili rol */ return message.reply("ticket'e üye çıkartmak için yetkin yok.");
 
