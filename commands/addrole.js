@@ -2,7 +2,7 @@ const discord = require("discord.js")
 
 module.exports.run = async (client, message, args) => {
 
-    if(!message.member.roles.cache.has('944696204661493790')) return message.reply("Rolleri yönet yetkin yok.")
+    if(!message.member.roles.cache.has('886602905468158003')) return message.reply("Rolleri yönet yetkin yok.")
 
    let user = message.mentions.users.first() || await message.guild.members.cache.get(args[0]);
    let role = message.mentions.roles.first();
