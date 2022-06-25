@@ -43,6 +43,20 @@ module.exports.run = async (client, message, args, prefix) => {
 
             });
 
+            settedParent.permissionOverwrites.edit(message.guild.roles.cache.find(x => x.name === "@Üye"), {
+
+                SEND_MESSAGES: false,
+                VIEW_CHANNEL: false
+
+            });
+
+            settedParent.permissionOverwrites.edit(message.guild.roles.cache.find(x => x.name === "@Student"), {
+
+                SEND_MESSAGES: false,
+                VIEW_CHANNEL: false
+
+            });
+
             // READ_MESSAGE_HISTORY Was vroeger READ_MESSAGES
             // Perms zodat de gebruiker die het command heeft getypt alles kan zien van zijn ticket.
             settedParent.permissionOverwrites.edit(message.author.id, {
