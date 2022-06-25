@@ -43,14 +43,14 @@ module.exports.run = async (client, message, args, prefix) => {
 
             });
 
-            settedParent.permissionOverwrites.edit(message.guild.roles.cache.find(x => x.name === "@Üye"), {
+            settedParent.permissionOverwrites.edit(message.guild.roles.cache.find(x => x.name === "Üye"), {
 
                 SEND_MESSAGES: false,
                 VIEW_CHANNEL: false
 
             });
 
-            settedParent.permissionOverwrites.edit(message.guild.roles.cache.find(x => x.name === "@Student"), {
+            settedParent.permissionOverwrites.edit(message.guild.roles.cache.find(x => x.name === "Student"), {
 
                 SEND_MESSAGES: false,
                 VIEW_CHANNEL: false
