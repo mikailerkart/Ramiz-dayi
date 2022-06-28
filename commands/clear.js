@@ -2,7 +2,7 @@ module.exports.run = async (bot, message, args) => {
 
     if(!message.member.roles.cache.has('944696013497700413')) /*clear yetkili rol */ return message.reply("Clear atmak için yetkin yok.")
 
-    if(!args[0]) return message.reply("Ne kadar mesaj silmek istediğini sayi ile belirtmen lazim.")
+    if(!args[0]) return message.reply("Ne kadar mesaj silmek istediğini sayı ile belirtmen lazım.")
 
     if(parseInt(args[0])){
 
@@ -26,11 +26,11 @@ module.exports.run = async (bot, message, args) => {
             }
 
         }).catch(err => {
-            return message.reply("0'dan büyük bir sayi girin");
+            return message.reply("0'dan büyük bir sayı girin");
         });
 
     }else {
-        return message.reply("Bir say yazman gerek.")
+        return message.reply("Bir sayı yazman gerek.")
     }
 }
 

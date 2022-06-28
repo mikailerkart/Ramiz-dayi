@@ -12,11 +12,11 @@ module.exports.run = async (bot, message, args) => {
 
     var reason = args.slice(1).join(" ");
 
-    if(!muteUser) return message.reply("kullanci bulunamiyor");
+    if(!muteUser) return message.reply("kullanıcı bulunamıyor");
 
     let muteRole = message.guild.roles.cache.get("890272416582996088"); // muted role
 
-    if(!muteRole) return message.channel.send("Muted rol ayarlanmamis, lütfen ayarlayiniz.");
+    if(!muteRole) return message.channel.send("Muted rol ayarlanmamış, lütfen ayarlayınız.");
 
     var muteTime = args[2];
 

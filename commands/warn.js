@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
 
     var reason = args.slice(1).join(" ");
 
-    if(!warnUser) return message.reply("kullanci bulunamiyor");
+    if(!warnUser) return message.reply("kullanıcı bulunamıyor");
 
     const warns = JSON.parse(fs.readFileSync("./warnings.json", "UTF8"));
 

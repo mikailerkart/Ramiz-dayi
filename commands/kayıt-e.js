@@ -21,29 +21,29 @@ module.exports.run = async (client, message, args) => {
    let kayit_kanal      = db.fetch(`kayit_kayit_kanal_${message.guild.id}`)
 
 
-    if(!kayit_ytk) return message.channel.send(`**Kayit yetkilisi** rolü ayarlanmamiş`)
+    if(!kayit_ytk) return message.channel.send(`**Kayit yetkilisi** rolü ayarlanmamış`)
     if(!message.member.roles.cache.has(kayit_ytk)) return message.channel.send(`Bu komutu sadece **Register staff** yetkisi olanlar kulllanabilir`)
-    if(!kayit_ögrenci) return message.channel.send(`**Ögrenci** rolü ayarlanmamiş`)
-    if(!kayit_erkek) return message.channel.send(`**Erkek** rolü ayarlanmamiş`)
-    if(!kayit_kiz) return message.channel.send(`**Kiz** rolü ayarlanmamiş`)
-    if(!kayit_mezun) return message.channel.send(`**Mezun** rolü ayarlanmamiş`)
-    if(!kayit_12_sinif) return message.channel.send(`**12 sinif** rolü ayarlanmamiş`)
-    if(!kayit_11_sinif) return message.channel.send(`**11 sinif** rolü ayarlanmamiş`)
-    if(!kayit_10_sinif) return message.channel.send(`**10 sinif** rolü ayarlanmamiş`)
-    if(!kayit_9_sinif) return message.channel.send(`**9 sinif** rolü ayarlanmamiş`)
-    if(!kayit_üniversite) return message.channel.send(`**Üniversite** rolü ayarlanmamiş`)
-    if(!kayit_türk) return message.channel.send(`**Türk** rolü ayarlanmamiş`)
-    if(!kayit_alien) return message.channel.send(`**Alien** rolü ayarlanmamiş`)
-    if(!kayitsiz) return message.channel.send(`**Kayitsiz** rolü ayarlanmamiş`)
-    if(!kayit_log) return message.channel.send(`**Kayit lig** rolü ayarlanmamiş`)
-    if(!kayit_kanal) return message.channel.send(`**Kayit kanal** rolü ayarlanmamiş`)
+    if(!kayit_ögrenci) return message.channel.send(`**Ögrenci** rolü ayarlanmamış`)
+    if(!kayit_erkek) return message.channel.send(`**Erkek** rolü ayarlanmamış`)
+    if(!kayit_kiz) return message.channel.send(`**Kiz** rolü ayarlanmamış`)
+    if(!kayit_mezun) return message.channel.send(`**Mezun** rolü ayarlanmamış`)
+    if(!kayit_12_sinif) return message.channel.send(`**12 sinif** rolü ayarlanmamış`)
+    if(!kayit_11_sinif) return message.channel.send(`**11 sinif** rolü ayarlanmamış`)
+    if(!kayit_10_sinif) return message.channel.send(`**10 sinif** rolü ayarlanmamış`)
+    if(!kayit_9_sinif) return message.channel.send(`**9 sinif** rolü ayarlanmamış`)
+    if(!kayit_üniversite) return message.channel.send(`**Üniversite** rolü ayarlanmamış`)
+    if(!kayit_türk) return message.channel.send(`**Türk** rolü ayarlanmamış`)
+    if(!kayit_alien) return message.channel.send(`**Alien** rolü ayarlanmamış`)
+    if(!kayitsiz) return message.channel.send(`**Kayitsiz** rolü ayarlanmamış`)
+    if(!kayit_log) return message.channel.send(`**Kayit lig** rolü ayarlanmamış`)
+    if(!kayit_kanal) return message.channel.send(`**Kayit kanal** rolü ayarlanmamış`)
 
     var member = message.mentions.members.first() || await message.guild.members.cache.get(args[0]);
     var sinif = args[1]
     var irk = args [2]
 
-    if(!member) return message.channel.send(`Lütfen kayit edilecek kişiyi etiketleyiniz.`)
-    if(!sinif) return message.channel.send(`Lütfen sinif belirtiniz.`)
+    if(!member) return message.channel.send(`Lütfen kayıt edilecek kişiyi etiketleyiniz.`)
+    if(!sinif) return message.channel.send(`Lütfen sınıf belirtiniz.`)
     if(!irk) return message.channel.send(`Lütfen türk/ailen belirtiniz.`)
 
     let kayitci = db.fetch(`kayit_yetkilisi_${message.guild.id}_${message.author.id}`)
@@ -82,11 +82,11 @@ module.exports.run = async (client, message, args) => {
     let kayitlari = db.fetch(`kayit_yetkilisi_${message.guild.id}_${message.author.id}`)
     const botEmbed = new discord.MessageEmbed()
         .setDescription(`
-        Kayit olan üye: ${member}
+        Kayıt olan üye: ${member}
         
-        Kayit yetkilisinin bilgileri:
-        Kayit yapan kişi : ${message.author}
-        Yaptigi kayitlar : **${kayitlari}** 
+        Kayıt yetkilisi nın bilgileri:
+        Kayıt yapan kişi : ${message.author}
+        Yaptıği kayıtlar : **${kayitlari}** 
         
         `)
 
@@ -99,5 +99,5 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
     name: "e",
     category: "general",
-    description: "Erkek kayit etme komutu"
+    description: "Erkek kayıt etme komutu"
 }

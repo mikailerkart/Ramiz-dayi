@@ -7,11 +7,11 @@ module.exports.run = async (bot, message, args) => {
 
     var muteUser = message.mentions.members.first() || await message.guild.members.cache.get(args[0]);
 
-    if(!muteUser) return message.reply("kullanci bulunamiyor");
+    if(!muteUser) return message.reply("kullanını bulunamıyor");
 
     let muteRole = message.guild.roles.cache.get("890272416582996088"); // muted rol
 
-    if(!muteRole) return message.channel.send("Muted rol ayarlanmamis, lütfen ayarlayiniz.");
+    if(!muteRole) return message.channel.send("Muted rol ayarlanmamış, lütfen ayarlayınız.");
 
     if (muteUser.roles.cache.some(role => role.name === "muted")) {
         message.channel.send("Bu kişi de zaten muted rolü yok");

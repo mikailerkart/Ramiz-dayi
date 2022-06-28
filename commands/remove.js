@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     if(message.channel.parentId !== categoryID) return message.reply("Bu bir ticket kanalı değil");
 
-    if (!args[0]) return message.reply("Kullanıcı belirtilmemiş");
+    if (!args[0]) return message.reply("Kullanıcı belirtilmemış");
 
     var removeUser = message.guild.members.cache.get(message.mentions.users.first().id || message.guild.members.cache.get(args[0]).id);
 

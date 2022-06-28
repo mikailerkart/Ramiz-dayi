@@ -23,22 +23,22 @@ module.exports.run = async (client, message, args) => {
     let kayit_log        = db.fetch(`kayit_kayit_log_${message.guild.id}`)
     let kayit_kanal      = db.fetch(`kayit_kayit_kanal_${message.guild.id}`)
 
-    if(!kayit_ytk) return message.channel.send(`**Kayit yetkilisi** rolü ayarlanmamiş`)
+    if(!kayit_ytk) return message.channel.send(`**Kayit yetkilisi** rolü ayarlanmamış`)
     if(!message.member.roles.cache.has(kayit_ytk)) return message.channel.send(`Bu komutu sadece **Register staff** yetkisi olanlar kulllanabilir`)
-    if(!kayit_ögrenci) return message.channel.send(`**Ögrenci** rolü ayarlanmamiş`)
-    if(!kayit_erkek) return message.channel.send(`**Erkek** rolü ayarlanmamiş`)
-    if(!kayit_kiz) return message.channel.send(`**Kiz** rolü ayarlanmamiş`)
-    if(!kayit_mezun) return message.channel.send(`**Mezun** rolü ayarlanmamiş`)
-    if(!kayit_12_sinif) return message.channel.send(`**12 sinif** rolü ayarlanmamiş`)
-    if(!kayit_11_sinif) return message.channel.send(`**11 sinif** rolü ayarlanmamiş`)
-    if(!kayit_10_sinif) return message.channel.send(`**10 sinif** rolü ayarlanmamiş`)
-    if(!kayit_9_sinif) return message.channel.send(`**9 sinif** rolü ayarlanmamiş`)
-    if(!kayit_üniversite) return message.channel.send(`**Üniversite** rolü ayarlanmamiş`)
-    if(!kayit_türk) return message.channel.send(`**Türk** rolü ayarlanmamiş`)
-    if(!kayit_alien) return message.channel.send(`**Alien** rolü ayarlanmamiş`)
-    if(!kayitsiz) return message.channel.send(`**Kayitsiz** rolü ayarlanmamiş`)
-    if(!kayit_log) return message.channel.send(`**Kayit lig** rolü ayarlanmamiş`)
-    if(!kayit_kanal) return message.channel.send(`**Kayit kanal** rolü ayarlanmamiş`)
+    if(!kayit_ögrenci) return message.channel.send(`**Ögrenci** rolü ayarlanmamış`)
+    if(!kayit_erkek) return message.channel.send(`**Erkek** rolü ayarlanmamış`)
+    if(!kayit_kiz) return message.channel.send(`**Kiz** rolü ayarlanmamış`)
+    if(!kayit_mezun) return message.channel.send(`**Mezun** rolü ayarlanmamış`)
+    if(!kayit_12_sinif) return message.channel.send(`**12 sinif** rolü ayarlanmamış`)
+    if(!kayit_11_sinif) return message.channel.send(`**11 sinif** rolü ayarlanmamış`)
+    if(!kayit_10_sinif) return message.channel.send(`**10 sinif** rolü ayarlanmamış`)
+    if(!kayit_9_sinif) return message.channel.send(`**9 sinif** rolü ayarlanmamış`)
+    if(!kayit_üniversite) return message.channel.send(`**Üniversite** rolü ayarlanmamış`)
+    if(!kayit_türk) return message.channel.send(`**Türk** rolü ayarlanmamış`)
+    if(!kayit_alien) return message.channel.send(`**Alien** rolü ayarlanmamış`)
+    if(!kayitsiz) return message.channel.send(`**Kayitsiz** rolü ayarlanmamış`)
+    if(!kayit_log) return message.channel.send(`**Kayit lig** rolü ayarlanmamış`)
+    if(!kayit_kanal) return message.channel.send(`**Kayit kanal** rolü ayarlanmamış`)
 
 
     var member = message.mentions.users.first() || message.author.id
@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
 
     const botEmbed = new discord.MessageEmbed()
         .setDescription(`
-        Yaptiği Kayit Sayisi: **${kayit ? kayit : "0"}**
+        Yaptığı Kayıt Sayısı: **${kayit ? kayit : "0"}**
 
         `)
     message.channel.send({ embeds: [botEmbed] })

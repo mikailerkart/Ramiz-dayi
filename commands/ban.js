@@ -14,21 +14,21 @@ module.exports.run = async (bot, message, args) => {
 
     var banUser = message.guild.members.cache.get(message.mentions.users.first().id || message.guild.members.get(args[0]).id)
 
-    if(!banUser) return message.reply("Kullanici bulunamadi.");
+    if(!banUser) return message.reply("Kullanıcı bulunamadı.");
 
-    if(banUser.roles.cache.has('942186888943534141')) return message.reply('Bu kişiyi atamiyorum.')
+    if(banUser.roles.cache.has('942186888943534141')) return message.reply('Bu kişiyi atamıyorum.')
 
     var reason = args.slice(1).join(" ");
 
     var embedPrompt = new discord.MessageEmbed()
         .setColor("GREEN")
-        .setTitle("Lütfen 30 saniye içinde yanit verin.")
+        .setTitle("Lütfen 30 saniye içinde yanıt verin.")
         .setDescription(`${banUser} bu kişiyi ban atmak istiyor musun?`)
 
     var embed = new discord.MessageEmbed()
         .setColor("RED")
-        .setDescription(`${banUser} ban atildi. (${banUser.id})
-        ${message.author} tarafindan ban atildi.
+        .setDescription(`${banUser} ban atıldı. (${banUser.id})
+        ${message.author} tarafindan ban atıldı.
         **Sebep:** ${reason}`)
         .setFooter(message.member.displayName)
         .setTimestamp();
@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
                     msg.delete();
 
                     banUser.ban({reason: reason}).catch(err => {
-                        if (err) return message.channel.send("Bir şeyler yanliş gitti.")
+                        if (err) return message.channel.send("Bir şeyler yanlış gitti.")
                     });
                     
                     message.channel.send({ embeds: [embed] })

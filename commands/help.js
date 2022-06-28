@@ -30,11 +30,11 @@ module.exports.run = async (client, message, args) => {
         message.author.send(respone).then(() => {
             return message.reply("Tüm komutlari dmden bulabilirsin.");
         }).catch(() => {
-            return message.reply("Dm kutunuz kapali, bu nedenle bir mesaj alamadiniz.");
+            return message.reply("Dm kutunuz kapalı, bu nedenle bir mesaj alamadınız.");
         })
 
     }catch (error) {
-        message.reply(`Bir şeyler yanliş gitti. hata: ${error}`);
+        message.reply(`Bir şeyler yanlış gitti. hata: ${error}`);
     }
 
 }
@@ -42,5 +42,5 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
     name: "help",
     category: "info",
-    description: "Şu an kullandigin dm mesajini gönderir."
+    description: "Şu an kullandığın dm mesajini gönderir."
 }
